@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::get('halo', function () {
 Route::get('kontak', function () {
 	return view('kontak');
 });
+
+// Route untuk menampilkan data siswa
+Route::get('/siswa', [SiswaController::class, 'index']);
